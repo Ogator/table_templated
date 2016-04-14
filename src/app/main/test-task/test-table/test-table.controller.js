@@ -22,6 +22,7 @@
     var vm = this;
     vm.people = PeopleData.data;
     vm.filtered_people = [];
+    vm.filterResetDisabled = true;
     vm.filters = {
       firstNameFilter: null,
       lastNameFilter: null,
@@ -44,6 +45,7 @@
     // Methods
     $scope.addFilter = function() {
       $log.debug(JSON.stringify(vm.filters));
+      vm.filterResetDisabled = false;
       vm.filtered_people = PeopleData.data;
       if(vm.filters.firstNameFilter != null) vm.filtered_people = vm.filtered_people.filter(filterFirstName, vm.filters.firstNameFilter);
       if(vm.filters.lastNameFilter != null) vm.filtered_people = vm.filtered_people.filter(filterLastName, vm.filters.lastNameFilter);
@@ -54,6 +56,7 @@
       vm.filtered_people = [];
     };
     $scope.resetFilter = function() {
+      vm.filterResetDisabled = true;
       vm.people = PeopleData.data;
       vm.filters = {};
     };

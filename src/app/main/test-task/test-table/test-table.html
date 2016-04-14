@@ -20,7 +20,7 @@
     <md-datepicker ng-model="vm.filters.registeredFilter" ng-change="addFilter()" md-placeholder="Registered" ng-model-options="{updateOn: 'default blur', debounce: {default: 300, blur: 0} }"></md-datepicker>
   </div>
   <div id="filterReset" layout="column" layout-gt-xs="row" >
-    <md-button class="md-warn" ng-click="resetFilter()">СБРОСИТЬ ФИЛЬТР</md-button>
+    <md-button class="md-warn" ng-click="resetFilter()" ng-disabled="vm.filterResetDisabled">СБРОСИТЬ ФИЛЬТР</md-button>
   </div>
 </div>
 <div class="content">
