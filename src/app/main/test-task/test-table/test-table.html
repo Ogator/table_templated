@@ -1,23 +1,23 @@
 
 <div id="filterContainer" class="white-bg md-whiteframe-4dp layout-margin">
   <div id="filterInputs" layout="column" layout-gt-xs="row" class="layout-padding">
-    <md-input-container>
+    <md-input-container flex>
       <label>First Name</label>
       <input ng-change="addFilter()" type="text" ng-model="vm.filters.firstNameFilter" ng-model-options="{updateOn: 'default blur', debounce: {default: 300, blur: 0} }">
     </md-input-container>
-    <md-input-container>
+    <md-input-container flex>
       <label>Last Name</label>
       <input ng-change="addFilter()" name="lastName" type="text" ng-model="vm.filters.lastNameFilter" ng-model-options="{updateOn: 'default blur', debounce: {default: 300, blur: 0} }">
     </md-input-container>
-    <md-input-container>
+    <md-input-container flex>
       <label>E-Mail</label>
       <input ng-change="addFilter()" name="email" type="email" ng-model="vm.filters.emailFilter" ng-model-options="{updateOn: 'default blur', debounce: {default: 300, blur: 0} }">
     </md-input-container>
-    <md-input-container>
+    <md-input-container flex>
       <label>Gender</label>
       <input ng-change="addFilter()" name="gender" type="text" ng-model="vm.filters.genderFilter" ng-model-options="{updateOn: 'default blur', debounce: {default: 300, blur: 0} }">
     </md-input-container>
-    <md-datepicker ng-model="vm.filters.registeredFilter" ng-change="addFilter()" md-placeholder="Registered" ng-model-options="{updateOn: 'default blur', debounce: {default: 300, blur: 0} }"></md-datepicker>
+    <md-datepicker flex ng-model="vm.filters.registeredFilter" ng-change="addFilter()" md-placeholder="Registered" ng-model-options="{updateOn: 'default blur', debounce: {default: 300, blur: 0} }"></md-datepicker>
   </div>
   <div id="filterReset" layout="column" layout-gt-xs="row" >
     <md-button class="md-warn" ng-click="resetFilter()" ng-disabled="vm.filterResetDisabled">СБРОСИТЬ ФИЛЬТР</md-button>
